@@ -3,10 +3,10 @@
 ## REGNO: 212224230070
 ## AIM:
 To perform Exploratory Data Analysis on the given data set.
-      
+
 ## EXPLANATION:
-  The primary aim with exploratory analysis is to examine the data for distribution, outliers and anomalies to direct specific testing of your hypothesis.
-  
+The primary aim with exploratory analysis is to examine the data for distribution, outliers and anomalies to direct specific testing of your hypothesis.
+
 ## ALGORITHM:
 STEP 1: Import the required packages to perform Data Cleansing,Removing Outliers and Exploratory Data Analysis.
 
@@ -25,7 +25,7 @@ STEP 7: Use cross tabulation method to quantitatively analyze the relationship b
 STEP 8: Use heatmap method of representation to show relationships between two variables, one plotted on each axis.
 
 ## CODING AND OUTPUT
- ```
+```
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -65,8 +65,8 @@ fig, ax1 = plt.subplots(figsize=(5,5))
 graph=sns.countplot(ax=ax1,x= 'Survived', data=df)
 graph.set_xticklabels (graph.get_xticklabels (), rotation=90)
 for p in graph.patches:
-  height = p.get_height()
-  graph.text(p.get_x()+p.get_width()/2., height + 0.1, height,ha="center")
+height = p.get_height()
+graph.text(p.get_x()+p.get_width()/2., height + 0.1, height,ha="center")
 ```
 ![image](https://github.com/22008837/EXNO2DS/assets/120194155/fc38c081-962c-4711-9088-d3b443b15295)
 ```
@@ -92,8 +92,8 @@ fig, ax1 = plt.subplots(figsize=(8,5))
 graph=sns.countplot(ax=ax1,data=df,x="Survived", hue="Pclass", palette="rainbow")
 graph.set_xticklabels (graph.get_xticklabels())
 for p in graph.patches:
-  height = p.get_height()
-  graph.text(p.get_x()+p.get_width()/2, height+ 20.8, height,ha="left")
+height = p.get_height()
+graph.text(p.get_x()+p.get_width()/2, height+ 20.8, height,ha="left")
 ```
 ![image](https://github.com/22008837/EXNO2DS/assets/120194155/9154f664-ab0a-43a0-930a-3c01f6851ae6)
 ```
@@ -123,7 +123,7 @@ g.fig.set_size_inches(8,5)
 g.fig.subplots_adjust(top=0.81,right=0.86)
 ax =g.facet_axis(0,0)
 for p in ax.patches:
-   ax.text(p.get_x()-0.01,p.get_height()*1.02,'{0:.1f}'.format(p.get_height()),color='red',rotation='horizontal',size='small')
+ax.text(p.get_x()-0.01,p.get_height()*1.02,'{0:.1f}'.format(p.get_height()),color='red',rotation='horizontal',size='small')
 ```
 ![image](https://github.com/22008837/EXNO2DS/assets/120194155/1c43b392-2ae5-46ca-8255-1d29f5d566cd)
 ```
